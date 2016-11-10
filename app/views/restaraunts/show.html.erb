@@ -1,0 +1,13 @@
+
+<main>
+  <h1><%= @restaraunt.name %></h1>
+  <h2><%= @restaraunt.address %></h2>
+  <h2>Menu Items:</h2>
+  <% @restaraunt.food_items.each do |food| %>
+  <h4><%= food.name %></h4>
+  <h5>Price: $<%= food.cost%></h5>
+  <% end %>
+
+  <h3><%= link_to "Edit Restaraunt Details",  edit_restaraunt_path(@restaraunt) %></h3>
+  <h3><%= link_to "Delete", restaraunt_path(@restaraunt), method: :delete %></h3>
+  </main>

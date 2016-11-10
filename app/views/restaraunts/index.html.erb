@@ -1,0 +1,9 @@
+
+
+<main>
+  <h1>All Restaraunts <%= link_to "(+)", new_restaraunt_path %></h1>
+  <% @restaraunts.each do |rest| %>
+  <p><%= link_to rest.name, rest %></p>
+  <% end %>
+
+</main>
